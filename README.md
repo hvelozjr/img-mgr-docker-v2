@@ -73,3 +73,5 @@ Ensure that `.ebextensions/` folder is at the root of your zip file!
 ### Launch in Beanstalk
 
 Within the AWS webconsole, create a new container Elastic Beanstalk application. Choose to upload your newly created `img-mgr.zip` and launch it. This will take a while, so open another AWS web console and watch the cloudformation resources roll out.
+
+For this part, we need to update the PolicyName in .ebextensions/resource.config so its different everytime we add a new Docker Image or it will break the original policy. 
